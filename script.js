@@ -79,7 +79,7 @@ function game() {
 	} else if (userScore < computerScore) {
 		console.log('you lost :(');
 	} else {
-		console.error('error');
+		console.error('you tied :/');
 	}
 }
 
