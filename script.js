@@ -48,17 +48,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-	let choice1 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice1.toLowerCase(), computerPlay()));
-	let choice2 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice2.toLowerCase(), computerPlay()));
-	let choice3 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice3.toLowerCase(), computerPlay()));
-	let choice4 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice4.toLowerCase(), computerPlay()));
-	let choice5 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice5.toLowerCase(), computerPlay()));
-
+	let playerSelection, computerSelection, result;
+	for (let i = 0; i <= 5; i++) {
+		playerSelection = prompt("Choose Rock, Paper, or Scissors.");
+		if (playerSelection === "") {
+			console.log("Breaking...");
+			break;
+		}
+		computerSelection = computerPlay();
+		result = playRound(playerSelection, computerSelection);
+		console.log(`Round ${i}: ${result}`);
+	}
 	if (userScore > computerScore) {
 		console.log('you won :)');
 	} else if (userScore < computerScore) {
