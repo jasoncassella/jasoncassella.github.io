@@ -27,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
 		winnerAnnouncement = 'You lose! Scissors cuts Paper';
 		computerScore++;
 	} else if (playerSelection === 'paper' && computerSelection === 'paper') {
-		winnerAnnouncement = 'Its a tie! you both picked Rock';
+		winnerAnnouncement = 'Its a tie! you both picked Paper';
 		userScore++;
 		computerScore++;
 	} else if (playerSelection === 'scissors' && computerSelection === 'paper') {
